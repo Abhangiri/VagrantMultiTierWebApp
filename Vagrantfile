@@ -56,7 +56,7 @@ Vagrant.configure("2") do |config|
 #  web01.vm.network "public_network"
   web01.vm.provider "virtualbox" do |vb|
      vb.gui = true
-     vb.memory = "800"
+     vb.memory = "1024"
    end
   web01.vm.provision "shell", path: "nginx.sh"  
 end
