@@ -1,61 +1,66 @@
-Vagrant Multi-Tier Web App Deployment
+# Vagrant Multi-Tier Web App Deployment
 
-Overview
+## Overview
 
 This project demonstrates the deployment of a Multi-Tier Web Application locally using Vagrant. It utilizes various technologies to set up different services, including Nginx (Web Service), Tomcat (Application Server), RabbitMQ (Broker/Queuing Agent), Memcache (DB Caching), ElasticSearch (Indexing/Search service), and MySQL (SQL Database).
 
-Prerequisites
+## Prerequisites
 Before getting started, make sure you have the following prerequisites installed:
-1. Oracle VM Virtualbox
-2. Vagrant
+## 1. Oracle VM Virtualbox
+## 2. Vagrant
 
-Getting Started
-1. Clone the Repository:
+# Project Structure
+
+* Vagrantfile: Contains the configuration for your Vagrant environment.
+* provision.sh: Bash script for provisioning the different services
+
+# Services
+
+* Nginx (Web Service):
+   Nginx is configured to serve as the web service.
+
+* Tomcat (Application Server):
+   Tomcat serves as the application server.
+
+* RabbitMQ (Broker/Queuing Agent):
+   RabbitMQ is used as the message broker.
+
+* Memcache (DB Caching):
+   Memcache is employed for database caching.
+
+* ElasticSearch (Indexing/Search service):
+   ElasticSearch handles indexing and search functionality.
+
+* MySQL (SQL Database):
+   MySQL serves as the SQL database.
+
+# Getting Started
+# 1. Clone the Repository:
 
      git clone https://github.com/Abhangiri/VagrantMultiTierWebApp.git
+     cd VagrantMultiTierWebApp
 
 
-2. Install VirtualBox and Vagrant:
+# 2. Install VirtualBox and Vagrant:
 
    Make sure you have VirtualBox and Vagrant installed on your machine.
 
-3. Run Vagrant:
-       vagrant up
+# 3. Run Vagrant:
+   vagrant up
+
+# 4. Access the Web Application:
+Visit the IP of nginx VM to access the Web Application, http://192.168.56.11
 
 
-Project Structure
-
-Vagrantfile: Contains the configuration for your Vagrant environment.
-provision.sh: Bash script for provisioning the different services
-
-Services
-
-Nginx (Web Service):
-  Nginx is configured to serve as the web service.
-
-Tomcat (Application Server):
-  Tomcat serves as the application server.
-
-RabbitMQ (Broker/Queuing Agent):
-  RabbitMQ is used as the message broker.
-
-Memcache (DB Caching):
-  Memcache is employed for database caching.
-
-ElasticSearch (Indexing/Search service):
-  ElasticSearch handles indexing and search functionality.
-
-MySQL (SQL Database):
-  MySQL serves as the SQL database.
 
 
-Vagrant Commands 
+# Vagrant Commands 
 
-Here are some useful Vagrant commands to manage the virtual machines:
+ Here are some useful Vagrant commands to manage the virtual machines:
 
-vagrant up: Create and provision the virtual machines.
-vagrant halt: Gracefully shut down the virtual machines.
-vagrant destroy: Remove the virtual machines. This will delete all data inside the virtual machines, so use with caution.
-vagrant ssh [machine-name]: SSH into a specific virtual machine.
+* vagrant up - Create and provision the virtual machines.
+* vagrant halt -  Gracefully shut down the virtual machines.
+* vagrant destroy - Remove the virtual machines. This will delete all data inside the virtual machines, so use with caution.
+* vagrant ssh [machine-name]: SSH into a specific virtual machine.
 
 
